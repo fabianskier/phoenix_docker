@@ -1,5 +1,35 @@
 # PhoenixDocker
 
+## Running this app using docker and docker compose
+
+You'll need to have [Docker installed](https://docs.docker.com/get-docker/).
+It's available on Windows, macOS and most distros of Linux.
+
+#### Custom your .env file based on .env.example:
+
+```sh
+cp .env.example .env
+```
+#### Build everything:
+
+```sh
+docker compose build
+```
+
+#### Create and migrate your database:
+
+```sh
+docker compose run web mix ecto.create
+```
+
+#### Run containers:
+
+```sh
+docker compose up -d
+```
+
+## Running this app locally
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
